@@ -12,7 +12,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-          cache: 'yarn-v1'
       - run: yarn
       - name: Print TEST_VAR after
         run: echo "$TEST_VAR"
