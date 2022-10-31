@@ -1,0 +1,23 @@
+name: Pull request
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      TEST_VAR: '0000'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+      - run: npm ci
+      - name: Print TEST_VAR after
+        run: echo "$TEST_VAR"
+      - name: Execute custom action
+        id: hello
+        uses: skauffmann/test-action@v1.0
+      - name: Print TEST_VAR after
+        run: echo "$TEST_VAR"
