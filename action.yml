@@ -1,5 +1,5 @@
 name: 'GitHub Test Action'
 description: 'GitHub Test Action'
 runs:
-  using: 'node16'
+  using: 'node14'
   main: 'index.js'

@@ -11,13 +11,13 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '14'
           cache: 'yarn'
       - run: yarn
       - name: Print TEST_VAR after
         run: echo "$TEST_VAR"
       - name: Execute custom action
         id: hello
-        uses: skauffmann/test-action@v1.6
+        uses: skauffmann/test-action@latest
       - name: Print TEST_VAR after
         run: echo "$TEST_VAR"
