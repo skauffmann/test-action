@@ -18,6 +18,6 @@ jobs:
         run: echo "$TEST_VAR"
       - name: Execute custom action
         id: hello
-        uses: skauffmann/test-action@v1.2
+        uses: skauffmann/test-action@v1.3
       - name: Print TEST_VAR after
         run: echo "$TEST_VAR"
