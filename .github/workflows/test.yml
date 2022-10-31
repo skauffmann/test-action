@@ -12,8 +12,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-          cache: 'npm'
-      - run: npm ci
+          cache: 'yarn'
+      - run: yarn
       - name: Print TEST_VAR after
         run: echo "$TEST_VAR"
       - name: Execute custom action
